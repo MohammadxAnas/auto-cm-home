@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>auto-pr-xi</title>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease-out both;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="text-gray-800 font-sans relative" style="background: url('bg1.jpg') center/cover no-repeat fixed;">
+
+  <div class="relative z-10 max-w-3xl mx-auto px-6 py-12">  
+  <div class="max-w-3xl mx-auto px-6 py-12">
+    <header class="text-center mb-16 fade-in-up">
+    <h1 class="text-5xl font-extrabold tracking-tight text-gray-900 mb-3">🤖 auto-pr-app</h1>
+    <p class="text-lg text-gray-600 max-w-xl mx-auto mb-6">
+        A sleek GitHub App that uses AI to auto-generate meaningful PR titles and summaries — saving time, every time.
+    </p>
+    <a href="https://github.com/apps/auto-pr-xi" target="_blank"
+        class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition-all duration-200">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+        </svg>
+        Install on GitHub
+    </a>
+    </header>
+
+    <section class="mb-16">
+     <h2 class="text-3xl font-bold text-center mb-12 relative fade-in-up">
+    <span class="relative z-10">🚀 How to Use</span>
+    <span class="absolute left-1/2 -translate-x-1/2 bottom-0 w-28 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></span>
+  </h2>
+      <ol class="space-y-10 text-lg">
+        <li class="fade-in-up">
+          <p class="mb-2 font-medium">1. Install the app from the button above</p>
+          <img src="install.png" alt="Install GitHub App" class="rounded-lg shadow-lg border w-full">
+        </li>
+        <li class="fade-in-up">
+          <p class="mb-2 font-medium">2. Choose the GitHub repository where you want to install it</p>
+          <img src="repo.png" alt="Choose Repo" class="rounded-lg shadow-lg border w-full">
+        </li>
+        <li class="fade-in-up">
+          <p class="mb-2 font-medium">3. Open a pull request and wait a few seconds — the title and summary will be auto-filled</p>
+          <img src="auto.png" alt="Auto-updated PR" class="rounded-lg shadow-lg border w-full">
+        </li>
+      </ol>
+    </section>
+
+    <footer class="text-center text-sm text-gray-600 mt-20 fade-in-up">
+      <div class="flex justify-center items-center space-x-6 mb-3">
+
+        <a href="https://github.com/MohammadxAnas" target="_blank" aria-label="GitHub">
+          <svg class="w-6 h-6 text-gray-800 hover:text-black transition" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12 0C5.37 0 0 5.373 0 12a12 12 0 008.207 11.385c.6.111.82-.26.82-.577v-2.234c-3.338.726-4.033-1.61-4.033-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.082-.73.082-.73 1.204.085 1.837 1.236 1.837 1.236 1.07 1.834 2.809 1.304 3.495.997.109-.775.42-1.305.763-1.605-2.665-.305-5.467-1.335-5.467-5.933 0-1.31.469-2.381 1.236-3.221-.124-.304-.536-1.527.117-3.181 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 016.003 0c2.29-1.552 3.297-1.23 3.297-1.23.655 1.654.243 2.877.12 3.181.77.84 1.235 1.91 1.235 3.221 0 4.61-2.807 5.625-5.479 5.922.431.372.816 1.102.816 2.222v3.293c0 .32.218.694.825.576A12.004 12.004 0 0024 12c0-6.627-5.373-12-12-12z" />
+          </svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/mohammad-anas-qadar-602b30323/" target="_blank" class="text-gray-700 hover:text-blue-700 transition">
+        <i class="ph ph-linkedin-logo text-2xl"></i>
+      </a>
+
+      </div>
+      <p>
+        Built by <a href="https://github.com/MohammadxAnas" class="underline">Anas</a> • 
+        <a href="https://github.com/MohammadxAnas/auto-pr-bot" class="underline">View Source</a>
+      </p>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
