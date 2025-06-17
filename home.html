@@ -3,12 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>auto-pr-xi</title>
+  <title>GitCommitPro - AI Powered Commit Messages</title>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
+    #tsparticles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      top: 0;
+      left: 0;
+    }
+    .content {
+      position: relative;
+      z-index: 10;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+    }
     .fade-in-up {
-      animation: fadeInUp 0.8s ease-out both;
+      animation: fadeInUp 1s ease-out both;
     }
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
@@ -16,47 +40,47 @@
     }
   </style>
 </head>
-<body class="text-gray-800 font-sans relative" style="background: url('bg1.jpg') center/cover no-repeat fixed;">
+<body class="text-gray-800 font-sans bg-gradient-to-r from-blue-50 to-indigo-100">
 
-  <div class="relative z-10 max-w-3xl mx-auto px-6 py-12">  
-  <div class="max-w-3xl mx-auto px-6 py-12">
-    <header class="text-center mb-16 fade-in-up">
-    <h1 class="text-5xl font-extrabold tracking-tight text-gray-900 mb-3">🤖 auto-pr-app</h1>
-    <p class="text-lg text-gray-600 max-w-xl mx-auto mb-6">
-        A sleek GitHub App that uses AI to auto-generate meaningful PR titles and summaries — saving time, every time.
+<!-- Particle Background -->
+<div id="tsparticles"></div>
+
+<div class="min-h-screen flex flex-col justify-center items-center px-6 py-16 space-y-16 content">
+
+  <!-- Header -->
+  <header class="text-center fade-in-up">
+    <h1 class="text-5xl font-extrabold mb-4 tracking-tight text-gray-900">🤖 GitCommitPro</h1>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      Auto-generate clean, meaningful Git commit messages using Gemini AI — seamlessly integrated with your VS Code workflow.
     </p>
-    <a href="https://github.com/apps/auto-pr-xi" target="_blank"
-        class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition-all duration-200">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
-        </svg>
-        Install on GitHub
+    <a href="https://marketplace.visualstudio.com/items?itemName=abc0123sq.smart-commit-ai" target="_blank"
+       class="mt-6 inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition transform hover:scale-105">
+       <i class="fas fa-download"></i> Install Extension
     </a>
-    </header>
+  </header>
 
-    <section class="mb-16">
-     <h2 class="text-3xl font-bold text-center mb-12 relative fade-in-up">
-    <span class="relative z-10">🚀 How to Use</span>
-    <span class="absolute left-1/2 -translate-x-1/2 bottom-0 w-28 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></span>
-  </h2>
-      <ol class="space-y-10 text-lg">
-        <li class="fade-in-up">
-          <p class="mb-2 font-medium">1. Install the app from the button above</p>
-          <img src="install.png" alt="Install GitHub App" class="rounded-lg shadow-lg border w-full">
-        </li>
-        <li class="fade-in-up">
-          <p class="mb-2 font-medium">2. Choose the GitHub repository where you want to install it</p>
-          <img src="repo.png" alt="Choose Repo" class="rounded-lg shadow-lg border w-full">
-        </li>
-        <li class="fade-in-up">
-          <p class="mb-2 font-medium">3. Open a pull request and wait a few seconds — the title and summary will be auto-filled</p>
-          <img src="auto.png" alt="Auto-updated PR" class="rounded-lg shadow-lg border w-full">
-        </li>
-      </ol>
-    </section>
+  <!-- Usage & Setup Section -->
+  <section class="max-w-5xl w-full grid md:grid-cols-3 gap-8 fade-in-up">
+    <div class="card">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-600">1. Install Extension</h2>
+      <img src="install-vscode.png" alt="Install Extension" class="rounded-lg shadow-sm mb-4">
+      <p>Install GitCommitPro from the VS Code Marketplace to get started quickly.</p>
+    </div>
+    <div class="card">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-600">2. Configure API Key</h2>
+      <img src="api-key-setup.png" alt="API Key Setup" class="rounded-lg shadow-sm mb-4">
+      <p>Go to VS Code Settings, search for <strong>Smart Commit AI</strong>, and paste your Gemini API Key.</p>
+    </div>
+    <div class="card">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-600">3. Generate Commits</h2>
+      <img src="generate-commit.png" alt="Generate Commit" class="rounded-lg shadow-sm mb-4">
+      <p>Stage your changes, run the command <code>gen-commit</code> from the Command Palette, and let AI suggest commits.</p>
+    </div>
+  </section>
 
-    <footer class="text-center text-sm text-gray-600 mt-20 fade-in-up">
-      <div class="flex justify-center items-center space-x-6 mb-3">
+  <!-- Footer -->
+  <footer class="text-center mt-20 text-gray-600 fade-in-up">
+          <div class="flex justify-center items-center space-x-6 mb-3">
 
         <a href="https://github.com/MohammadxAnas" target="_blank" aria-label="GitHub">
           <svg class="w-6 h-6 text-gray-800 hover:text-black transition" fill="currentColor" viewBox="0 0 24 24">
@@ -70,12 +94,29 @@
       </a>
 
       </div>
-      <p>
-        Built by <a href="https://github.com/MohammadxAnas" class="underline">Anas</a> • 
-        <a href="https://github.com/MohammadxAnas/auto-pr-bot" class="underline">View Source</a>
-      </p>
-    </footer>
-  </div>
+    <p>Made with ❤️ by <a href="https://www.linkedin.com/in/mohammad-anas-qadar-602b30323/" class="underline text-blue-600">Anas</a></p>
+  </footer>
+
 </div>
+
+<!-- Particle.js Config -->
+<script>
+  tsParticles.load("tsparticles", {
+    background: { color: { value: "transparent" } },
+    particles: {
+      number: { value: 60 },
+      color: { value: "#4F46E5" },
+      shape: { type: "circle" },
+      opacity: { value: 0.3 },
+      size: { value: 3 },
+      move: { enable: true, speed: 1 }
+    },
+    interactivity: {
+      events: { onHover: { enable: true, mode: "repulse" } },
+      modes: { repulse: { distance: 100 } }
+    }
+  });
+</script>
+
 </body>
 </html>
